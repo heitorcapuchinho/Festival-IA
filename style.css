@@ -1,0 +1,565 @@
+
+/* =========================
+   CONFIGURAÇÕES GERAIS
+========================= */
+
+:root {
+    --preto: #080808;
+    --cinza: #151515;
+    --cinza-claro: #a5a5a5;
+    --branco: #f5f5f0;
+    --verde: #c6ff00;
+    --roxo: #6d3cff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--preto);
+    color: var(--branco);
+    font-family: "Inter", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    height: 80px;
+    padding: 0 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #222;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: rgba(8, 8, 8, 0.95);
+}
+
+.logo {
+    font-family: "Archivo Black", sans-serif;
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: var(--cinza-claro);
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+nav a:hover,
+nav a.ativo {
+    color: var(--verde);
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 720px;
+    display: flex;
+    align-items: center;
+    padding: 80px 8%;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(8, 8, 8, 1) 0%,
+            rgba(8, 8, 8, 0.82) 45%,
+            rgba(8, 8, 8, 0.25) 100%
+        ),
+        url("img/artista3.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-text {
+    max-width: 700px;
+}
+
+.mini-titulo {
+    color: var(--verde);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-family: "Archivo Black", sans-serif;
+    font-size: clamp(4rem, 9vw, 9rem);
+    line-height: 0.85;
+    letter-spacing: -5px;
+}
+
+.hero h1 span {
+    color: var(--verde);
+}
+
+.descricao {
+    max-width: 500px;
+    margin: 35px 0;
+    color: #ccc;
+    line-height: 1.7;
+    font-size: 1.05rem;
+}
+
+.data-local {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 35px;
+}
+
+.data-local span {
+    color: var(--cinza-claro);
+}
+
+/* =========================
+   BOTÕES
+========================= */
+
+.botao {
+    display: inline-block;
+    background: var(--verde);
+    color: #000;
+    padding: 15px 25px;
+    font-size: 0.8rem;
+    font-weight: 800;
+    border: 2px solid var(--verde);
+    transition: 0.3s;
+}
+
+.botao:hover {
+    background: transparent;
+    color: var(--verde);
+}
+
+/* =========================
+   DESTAQUES
+========================= */
+
+.destaques {
+    padding: 100px 8%;
+}
+
+.titulo-secao {
+    margin-bottom: 50px;
+}
+
+.titulo-secao p {
+    color: var(--verde);
+    font-size: 0.75rem;
+    letter-spacing: 3px;
+}
+
+.titulo-secao h2 {
+    font-family: "Archivo Black", sans-serif;
+    font-size: 3rem;
+    margin-top: 10px;
+}
+
+.artistas-destaque {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.artistas-destaque article {
+    background: var(--cinza);
+}
+
+.artistas-destaque img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.artistas-destaque article div {
+    padding: 25px;
+}
+
+.artistas-destaque span,
+.artista-info span {
+    color: var(--verde);
+    font-size: 0.7rem;
+    font-weight: 700;
+}
+
+.artistas-destaque h3 {
+    font-family: "Archivo Black", sans-serif;
+    font-size: 1.7rem;
+    margin: 8px 0;
+}
+
+/* =========================
+   MANIFESTO
+========================= */
+
+.manifesto {
+    padding: 100px 8%;
+    background: var(--verde);
+    color: #000;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.manifesto .mini-titulo {
+    color: #000;
+}
+
+.manifesto h2 {
+    font-family: "Archivo Black", sans-serif;
+    font-size: clamp(2.5rem, 5vw, 5rem);
+    line-height: 0.95;
+}
+
+.manifesto > p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* =========================
+   TOPO DAS PÁGINAS
+========================= */
+
+.pagina-topo {
+    padding: 120px 8% 70px;
+    border-bottom: 1px solid #222;
+}
+
+.pagina-topo h1 {
+    font-family: "Archivo Black", sans-serif;
+    font-size: clamp(4rem, 9vw, 8rem);
+    line-height: 0.9;
+}
+
+.pagina-topo > p:last-child {
+    margin-top: 25px;
+    color: var(--cinza-claro);
+}
+
+/* =========================
+   LINEUP
+========================= */
+
+.lineup {
+    padding: 70px 8%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.artista {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    background: var(--cinza);
+    min-height: 180px;
+}
+
+.artista img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+}
+
+.artista-info {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.artista-info h2 {
+    font-family: "Archivo Black", sans-serif;
+    font-size: 1.6rem;
+    margin: 8px 0;
+}
+
+.artista-info p {
+    color: var(--cinza-claro);
+}
+
+/* =========================
+   INGRESSOS
+========================= */
+
+.ingressos {
+    padding: 70px 8%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.ingresso {
+    background: var(--cinza);
+    padding: 40px;
+    border: 1px solid #292929;
+}
+
+.destaque-ingresso {
+    border: 2px solid var(--verde);
+}
+
+.tipo {
+    color: var(--verde);
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.ingresso h2 {
+    font-family: "Archivo Black", sans-serif;
+    font-size: 3rem;
+    margin: 20px 0 5px;
+}
+
+.ingresso > span {
+    color: var(--cinza-claro);
+}
+
+.ingresso ul {
+    list-style: none;
+    margin: 30px 0;
+}
+
+.ingresso li {
+    padding: 12px 0;
+    border-bottom: 1px solid #292929;
+    color: #ccc;
+}
+
+/* =========================
+   INFORMAÇÕES
+========================= */
+
+.informacoes-grid {
+    padding: 80px 8%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+}
+
+.informacoes-grid h2,
+.regras h2 {
+    font-family: "Archivo Black", sans-serif;
+    margin-bottom: 20px;
+}
+
+.informacoes-grid p {
+    color: #bbb;
+    line-height: 1.8;
+    margin-bottom: 35px;
+}
+
+.mapa iframe {
+    width: 100%;
+    height: 400px;
+    border: 0;
+}
+
+.regras {
+    padding: 80px 8%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    background: var(--cinza);
+}
+
+.regras ul {
+    list-style: none;
+}
+
+.regras li {
+    padding: 15px 0;
+    border-bottom: 1px solid #333;
+    color: #ccc;
+}
+
+/* =========================
+   FAQ
+========================= */
+
+.faq {
+    padding: 70px 8%;
+    max-width: 1000px;
+}
+
+details {
+    border-top: 1px solid #333;
+    padding: 25px 0;
+}
+
+details:last-child {
+    border-bottom: 1px solid #333;
+}
+
+summary {
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+details p {
+    color: #aaa;
+    line-height: 1.7;
+    margin-top: 20px;
+    max-width: 800px;
+}
+
+.contato {
+    padding: 80px 8%;
+    background: var(--cinza);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+}
+
+.contato h2 {
+    font-family: "Archivo Black", sans-serif;
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.contato p {
+    color: #aaa;
+    line-height: 1.7;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 8px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+input,
+textarea {
+    background: #080808;
+    border: 1px solid #333;
+    padding: 15px;
+    color: white;
+    font-family: "Inter", sans-serif;
+    margin-bottom: 20px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 50px 8%;
+    border-top: 1px solid #222;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer strong {
+    font-family: "Archivo Black", sans-serif;
+}
+
+footer p {
+    color: #777;
+    font-size: 0.8rem;
+}
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 900px) {
+
+    header {
+        height: auto;
+        padding: 20px 5%;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        min-height: 650px;
+        padding: 70px 6%;
+    }
+
+    .artistas-destaque,
+    .ingressos {
+        grid-template-columns: 1fr;
+    }
+
+    .lineup {
+        grid-template-columns: 1fr;
+    }
+
+    .informacoes-grid,
+    .regras,
+    .manifesto,
+    .contato {
+        grid-template-columns: 1fr;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .hero h1 {
+        font-size: 4rem;
+        letter-spacing: -3px;
+    }
+
+    .artista {
+        grid-template-columns: 1fr;
+    }
+
+    .artista img {
+        width: 100%;
+        height: 250px;
+    }
+
+    .pagina-topo h1 {
+        font-size: 4rem;
+    }
+}
+```
